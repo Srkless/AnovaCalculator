@@ -1,0 +1,28 @@
+.text-field{
+    -fx-font-size: 18px; /* Promenite veličinu fonta ovde */
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #303f9f;
+    -fx-text-fill: #bdbdbd;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.menu-item {
+    -fx-background-color: #303f9f;
+    -fx-alignment: center-right;
+    -fx-padding: 0 10 10 10;
+}
+.menu-button .context-menu {
+    -fx-effect: null;
+    -fx-background-color: #303f9f;
+}
+

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Calculations">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #303f9f;">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="1000.0" layoutY="7.0" opacity="0.43" pickOnBounds="true">
+               <image>
+                  <Image url="@wallpaper.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="213.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anova Calculator">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="60.0" />
+               </font>
+            </Text>
+            <Line endX="480.0" layoutX="328.0" layoutY="112.0" startX="-140.0" stroke="#1976d2" strokeWidth="4.0" />
+            <GridPane fx:id="calculatedMatrix" alignment="CENTER" gridLinesVisible="true" layoutX="150.0" layoutY="171.0" prefHeight="360.0" prefWidth="700.0" style="-fx-border-color: #fff; -fx-border-width: 4; -fx-background-color: #303f9f;" stylesheets="@style.css">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Varioation" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Sum of squares" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Def freedom" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Mean square" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Computed F" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Tabulated F" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Alternatives" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SSALabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="AdfLabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Sa2Label" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CFLabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="FLabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Error" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SSELabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="edfLabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Se2Label" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Total" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SSTLabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tdfLabel" maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="60.0" maxWidth="175.0" minHeight="60.0" minWidth="175.0" prefHeight="60.0" prefWidth="175.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Button fx:id="bClose" layoutX="948.0" layoutY="11.0" mnemonicParsing="false" onAction="#close" prefHeight="20.0" prefWidth="40.0" style="-fx-background-color: #d50000; -fx-background-radius: 45;" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
